@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+#!/usr/bin/env bash
+
+if [ $# -gt 0 ]; then
+    
+    if [ "$1" == "artisan" ]; then
+        shift 1
+        docker-compose exec \
+            php \
+            php artisan "$@"
+
+    elif [ "$1" == "composer" ]; then
+        shift 1
+        docker-compose exec \
+            php \
+            composer 
+    
+    elif [ "$1" == "test" ]; then
+        shift 1
+        docker-compose exec \
+            php \
+            ./vendor/bin/phpunit "$@"
+
+    else
+        docker-compose "$@"
+    fi
+
+else
+    echo "./devtool artisan"
+    echo "./devtool composer"
+    echo "./devtool test"
+fi
