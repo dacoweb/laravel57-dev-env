@@ -27,5 +27,7 @@ RUN apk --no-cache add shadow \
     && groupmod -g ${HOST_UID} ${WEB_GROUP} \
     && chgrp -R ${WEB_GROUP} ${PHP_ROOT_DIR}/php-fpm.d/zz-www.conf
 
+USER ${WEB_USER}
+
 # Expose xdebug port ${XDEBUG_REMOTE_PORT}
 EXPOSE ${XDEBUG_REMOTE_PORT}
