@@ -5,7 +5,7 @@ Template for development environment
 ## Develpment Environment:
 
 * Mysql 5.7
-* PHP7.2 with phpfpm (Alpine container: php:7.2-fpm-alpine)
+* PHP7.1 with phpfpm (Alpine container: php:7.1-fpm-alpine)
 * XDebug for PHP
 
 ## Requirements
