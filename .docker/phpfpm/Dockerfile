@@ -7,10 +7,10 @@ ARG PHP_ROOT_DIR=/usr/local/etc
 ARG XDEBUG_REMOTE_PORT=9100
 
 # Installing php env requirements
-RUN apk --update --no-cache add autoconf g++ make && \
-    pecl install -f xdebug && \
-    docker-php-ext-enable xdebug && \
-    apk del --purge autoconf g++ make
+# RUN apk --update --no-cache add autoconf g++ make && \
+#     pecl install -f xdebug && \
+#     docker-php-ext-enable xdebug && \
+#     apk del --purge autoconf g++ make
 
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --filename=composer --install-dir=/bin

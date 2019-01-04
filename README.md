@@ -37,8 +37,6 @@ Create a laravel project
 ```
 $ docker exec -it {php_container} ash
 $ composer create-project --prefer-dist laravel/laravel application
-$ mv ./application/* .
-$ rmdir application
 ```
 
 The php application is expected to be located on the `src-code` directory.
